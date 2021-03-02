@@ -38,22 +38,26 @@ const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles';
 
-function generateTitleLinks(){
+function generateTitleLinks() {
 
   /* remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = '';
   /* for each article */
+  const articles = document.querySelectorAll(optArticleSelector);
 
-    /* get the article id */
+  for (let article of articles) {
+    console.log(article);
+  }
+  /* get the article id */
 
-    /* find the title element */
+  /* find the title element */
 
-    /* get the title from the title element */
+  /* get the title from the title element */
 
-    /* create HTML of the link */
+  /* create HTML of the link */
 
-    /* insert link into titleList */
+  /* insert link into titleList */
 
 }
 
