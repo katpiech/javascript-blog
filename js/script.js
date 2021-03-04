@@ -58,8 +58,9 @@ function generateTitleLinks() {
     console.log(html);
   }
   titleList.innerHTML = html;
+
   const links = document.querySelectorAll('.titles a');
-  console.log(links)
+  console.log(links);
 
   for (let link of links) {
     link.addEventListener('click', titleClickHandler);
