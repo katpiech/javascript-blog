@@ -75,8 +75,8 @@ generateTitleLinks();
 
 
 function generateTags() {
-  /* [NEW] create a new variable allTags with an empty array */
-  let allTags = [];
+  /* [NEW] create a new variable allTags with an empty object */
+  let allTags = {};
   /* find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
 
@@ -117,7 +117,6 @@ function generateTags() {
   /* [NEW] find list of tags in right column */
   const tagList = document.querySelector('.tags');
   console.log(tagList);
-
   /* [NEW] add html from allTags to tagList */
   tagList.innerHTML = allTags.join(' ');
 }
