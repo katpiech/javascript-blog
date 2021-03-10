@@ -43,3 +43,11 @@ body { background: #fff; font-family: "Source Sans Pro", sans-serif; color: #444
 .post-tags { display: -ms-flexbox; display: flex; }
 
 .post-tags p { margin: 0 10px 0 0; }
+
+/* Tags */
+.tag-size-1 {font-size: 15px; color: rgb(3, 77, 3); }
+.tag-size-2 {font-size: 20px; color: rgb(12, 184, 12);}
+.tag-size-3 {font-size: 26px; color: rgb(114, 212, 90);}
+.tag-size-4 {font-size: 33px; color: rgb(201, 156, 9) ;}
+.tag-size-5 {font-size: 40px; color: rgb(224, 212, 35);}
+aside ul li {display: inline;}
