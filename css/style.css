@@ -50,4 +50,4 @@ body { background: #fff; font-family: "Source Sans Pro", sans-serif; color: #444
 .tag-size-3 {font-size: 26px; color: rgb(114, 212, 90);}
 .tag-size-4 {font-size: 33px; color: rgb(201, 156, 9) ;}
 .tag-size-5 {font-size: 40px; color: rgb(224, 212, 35);}
-aside ul li {display: inline;}
+.list.tags li {display: inline;}
