@@ -1,6 +1,7 @@
 'use strict';
 const templates = {
-  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
+  tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML)
 };
 function titleClickHandler(event) {
   event.preventDefault();
@@ -56,6 +57,7 @@ function generateTitleLinks(customSelector = '') {
     const articleTitle = article.querySelector(optTitleSelector).innerHTML;
     console.log(articleTitle);
     /* create HTML of the link */
+    //const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
     const linkHTMLData = { id: articleId, title: articleTitle };
     const linkHTML = templates.articleLink(linkHTMLData);
     console.log(linkHTML);
@@ -117,13 +119,15 @@ function generateTags() {
     for (let tag of articleTagsArray) {
       console.log(tag);
       /* generate HTML of the link */
-      const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+      //const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+      const linkHTMLData = { id: tag};
+      const linkHTML = templates.tagLink(linkHTMLData);
       console.log(linkHTML);
       /* add generated code to html variable */
       html = html + '  ' + linkHTML;
       console.log(html);
       /* check if this link is NOT already in allTags */
-      if (!allTags.hasOwnProperty(tag)) {
+      if (!allTags.hasOwnProperty(tag)) {// eslint-disable-line no-prototype-builtins
         /* add tag to allTags object */
         allTags[tag] = 1;
       } else {
@@ -224,7 +228,7 @@ function generateAuthors() {
     html = html + '  ' + linkHTML;
     console.log(html);
     /* check if this link is NOT already in allAuthors */
-    if (!allAuthors.hasOwnProperty(author)) {
+    if (!allAuthors.hasOwnProperty(author)) {// eslint-disable-line no-prototype-builtins
       /*   add author to allAuthors object */
       allAuthors[author] = 1;
     } else {
