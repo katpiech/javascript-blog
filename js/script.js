@@ -148,10 +148,10 @@ function generateTags() {
   const tagsParams = calculateTagsParams(allTags);
   console.log('tagsParams:', tagsParams);
   /* create variable for all links HTML code */
-   const allTagsData = {tags: []};
+  const allTagsData = { tags: [] };
   /* START LOOP: for each tag in allTags: */
   for (let tag in allTags) {
-      allTagsData.tags.push({
+    allTagsData.tags.push({
       tag: tag,
       count: allTags[tag],
       className: calculateTagClass(allTags[tag], tagsParams)
@@ -159,7 +159,8 @@ function generateTags() {
     console.log(allTagsData);
     /* END LOOP: for each tag in allTags: */
   }
-  tagList.innerHTML = templates.tagCloudLink(allTagsData);}
+  tagList.innerHTML = templates.tagCloudLink(allTagsData);
+}
 generateTags();
 
 function tagClickHandler(event) {
@@ -243,8 +244,8 @@ function generateAuthors() {
     /* find list of authors in right column */
     const authorList = document.querySelector(optAuthorListSelector);
     /* create variable for all links HTML code */
-    const allAuthorsData = {authors: []};
-        /* START LOOP: for each author in allAuthors: */
+    const allAuthorsData = { authors: [] };
+    /* START LOOP: for each author in allAuthors: */
     for (let author in allAuthors) {
       allAuthorsData.authors.push({
         author: author,
